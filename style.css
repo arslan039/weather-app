@@ -1,0 +1,146 @@
+
+/* universal selectors will apply this on all document */
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;
+    font-family: Times New Roman (serif);
+}
+body{
+    background-color: rgb(6, 7, 0);
+}
+
+  /* styling searchbar menu */
+
+  /* styling main search box */
+  .searchbar{
+    max-width: 400px;
+    background:  linear-gradient(to right, rgb(224, 236, 49) , rgb(53, 201, 66), rgb(109, 159, 182) );
+    padding: 50px 40px;
+    margin : 100px auto  ;
+    border: 3px solid rgb(194, 58, 58);
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  /* styling placeholder and search button inside the main container or div class */
+
+  .search{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/* 
+  styling the placeholder portion the content inside the placeholder */
+
+  .search input{
+    border : 2px solid rgb(194, 58, 58) ;
+   background: #f3f2ef;
+   color:rgb(22, 1, 1) ;
+   padding: 20px;
+   height: 40px;
+   border-radius: 20px;
+   margin-right: 15px;
+   font-size: 15px;
+   flex: 1;  
+  }
+  input:hover{
+    border: 2px solid rgb(68, 8, 231) ;
+  }
+  input:focus{
+    outline: 2px dotted  rgb(68, 8, 231) ; 
+  }
+
+  /* styling the search button */
+
+  .search button{
+    border : 2px solid rgb(194, 58, 58) ;
+   background: #f3f2ef;
+   border-radius: 50%;
+   width : 50px;
+   height: 45px;
+   cursor: pointer;
+  }
+  button:hover{
+    border: 2px solid rgb(68, 8, 231)
+  }
+  
+/* styling the icon of search botton */
+
+.search button img{
+    width: 25px;
+    height: 25px;
+}
+/* weather portion styling */
+
+.w-icon{
+  margin-top:30px ;
+  width:160px ;
+}
+
+.conditions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 20px ;
+  margin-top: 60px;
+}
+.temp{
+  margin-top: 20px;
+  font-size: 50px;
+}
+.city{
+  margin-top: 20px;
+  font-size: 35px;
+}
+.column{
+display: flex;
+flex-direction: column;
+align-items: center; 
+  justify-content: center;
+}
+.column img{
+  width: 40px;
+  margin-right: 20px;
+}
+.humidity , .wind{
+  font-size: 20px;
+  margin-top: 10px;
+}
+.column h2{
+  font-size: 20px;
+}
+.weather{
+  display : none;
+}
+
+             /* media query for responsiveness */
+
+@media (max-width: 600px) {
+  .searchbar {
+    max-width: 300px;
+    padding: 30px 20px;
+  }
+
+  .search input {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .conditions {
+    flex-direction: column;
+  }
+
+  .column {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .temp,
+  .city,
+  .humidity,
+  .wind {
+    text-align: center;
+  }
+}
